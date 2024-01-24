@@ -1,0 +1,6 @@
+1- criar uma pasta e abrir co vscode
+2- abrir terminal [cmd]
+       		  bash
+npm init
+3- instalar as principais dependencias
+	npm i express mysql cors
