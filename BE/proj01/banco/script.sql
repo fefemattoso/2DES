@@ -1,8 +1,8 @@
 -- DDL - Estrutura
-drop database if exists lojinha;
-create database lojinha;
+drop database if exists locadora;
+create database locadora;
 use lojinha;
-create table Clientes(
+create table (
     id integer primary key auto_increment,
     cpf varchar(20) not null unique,
     nome varchar(50) not null,
