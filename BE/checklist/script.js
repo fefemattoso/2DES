@@ -3,11 +3,13 @@ document.addEventListener("DOMContentLoaded", loadTasks);
 function addTask() {
     var taskInput = document.getElementById("newTaskInput");
     var taskText = taskInput.value.trim();
+    var taskDate = document.getElementById("taskDateInput").value;
 
     if (taskText !== "") {
         var listItem = document.createElement("li");
         listItem.innerHTML = `
             <span>${taskText}</span>
+            <span>${taskDate}</span>
             <button onclick="editTask(this)"><i class="fas fa-edit"></i></button>
             <button onclick="deleteTask(this)"><i class="fas fa-trash-alt"></i></button>
             <button onclick="completeTask(this)"><i class="fas fa-check"></i></button>
@@ -16,6 +18,7 @@ function addTask() {
         document.getElementById("taskList").appendChild(listItem);
 
         taskInput.value = "";
+        document.getElementById("taskDateInput").value = ""; // Limpar campo de data
 
         saveTasks();
     }

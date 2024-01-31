@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Spirax', system-ui;
     background-color: #fff4f9;
     display: flex;
     align-items: center;
@@ -14,7 +14,8 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 40px;
-    width: 20vw;
+    width: 25vw;
+    height: 30vh;
     align-items: center;
 }
 
@@ -32,6 +33,13 @@ input {
     margin-right: 8px;
     border-radius: 50px;
     align-items: center;
+}
+
+/* Adicione um estilo para o campo de data */
+input[type="date"] {
+    padding: 8px;
+    margin-right: 8px;
+    border-radius: 50px;
 }
 
 button {
@@ -58,15 +66,15 @@ li {
     border-bottom: 1px solid #ffe1ee;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between; /* Ajuste para espaço entre os itens */
+    font-weight: 100;
 }
 
 li.completed {
     text-decoration: line-through;
-    color: #ffd6e3;
+    color: #f5a1bb;
 }
 
-li button {
-    margin-left: auto;
-    align-items: center;
+li span {
+    margin-right: 10px;
 }
