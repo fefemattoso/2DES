@@ -1,23 +1,22 @@
 -- DDL - Estrutura
 drop database if exists locadora;
 create database locadora;
-use lojinha;
-create table (
+use locadora;
+create table Filmes(
     id integer primary key auto_increment,
-    cpf varchar(20) not null unique,
     nome varchar(50) not null,
-    sobrenome varchar(50) not null,
-    nascimento date not null
+    direcao varchar(50) not null,
+    estudio varchar(50) not null,
+    faixa integer not null,
+    ano integer not null
 );
-describe Clientes;
+describe Filmes;
 
 -- DML - Popular com dados de teste
-insert into Clientes(cpf, nome, sobrenome, nascimento)
-values
-("111.111.111-11","Jair","Silva","1980-01-01"),
-("222.222.222-22","Jafoi","Solza","1990-02-25"),
-("333.333.333-33","Javai","Santos","1985-03-18"),
-("444.444.444-44","Jaera","Silveira","1982-04-13"),
-("555.555.555-55","Jacinto","Pena","2005-05-15");
-
-select * from Clientes;
+insert into Filmes(nome, direcao, estudio, faixa, ano)
+values  
+("Coraline","Henry Selick","laika","10","2009"),
+("Evil Bong","Charles Band","Full Moon","14","2006"),
+("Gingerdead Man","Charles Band","Full Moon","15","2005"),
+("The Refrigerator","Nicholas Jacob","Avenue D","16","1991");
+select * from Filmes;

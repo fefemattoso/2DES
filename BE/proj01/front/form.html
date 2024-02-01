@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>HorrorFlix!</h1>
+    </header>
+    <nav>
+        <a href="index.html" class="linkzin">Listar Todos</a>
+    </nav>
+    <main>
+        <form action="http://localhost:3000/filmes" method="post">
+            <input type="text" name="nome" placeholder="Nome do Filme" required>
+            <input type="text" name="direcao" placeholder="Direção" required>
+            <input type="text" name="estudio" placeholder="Estudio" required>
+            <input type="number" name="faixa" placeholder="Faixa Etária" required>
+            <input type="number" name="ano" placeholder="Ano de Lançamento" required>
+            <input type="submit" value="Enviar" class="enviar">
+        </form>
+    </main>
+    <footer>
+        <h2>By Tavinho & Fefê</h2>
+    </footer>
+</body>
+</html>

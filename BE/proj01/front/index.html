@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+    <link rel="stylesheet" href="tabela.css">
+</head>
+
+<body>
+    <header>
+        <h1>Catalogo</h1>
+        <a href="form.html" class="linkzin">Cadastrar Filmes</a>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NOME</th>
+                    <th>DIREÇÃO</th>
+                    <th>ESTUDIO</th>
+                    <th>FAIXA</th>
+                    <th>ANO</th>
+                </tr>
+            </thead>
+            <tbody id="dados">
+
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <h2>By Tavinho & Fefê</h2>
+    </footer>
+</body>
+
+<script>
+    const dados = document.getElementById("dados");
+    fetch('http://localhost:3000/filmes')
+        .then(res => res.json())
+        .then(res => {
+            res.forEach(filme => {
+                dados.innerHTML +=`
+                <tr>
+                    <td>${filme.id}</td>
+                    <td>${filme.nome}</td>
+                    <td>${filme.direcao}</td>
+                    <td>${filme.estudio}</td>
+                    <td>${filme.faixa}</td>
+                    <td>${filme.ano}</td>
+                </tr>`
+            })
+        })
+</script>
+
+</html>

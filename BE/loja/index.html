@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FadaMágica Miçangas</title>
+    <style>
+        /* Estilos CSS básicos para a página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            margin: 1em;
+            padding: 1em;
+            background-color: white;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #cart {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #cartModal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 2em;
+            background-color: white;
+            border: 1px solid #ddd;
+            z-index: 2;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>FadaMágica Miçangas</h1>
+    </header>
+
+    <div id="cart">Carrinho</div>
+
+    <div id="cartModal">
+        <span class="close" onclick="closeCart()">&times;</span>
+        <h2>Carrinho de Compras</h2>
+        <ul id="cartItems"></ul>
+    </div>
+
+    <div id="catalog">
+        <!-- Exemplo de produto -->
+        <div class="product" onclick="addToCart('Miçangas Encantadas', 15.99)">
+            <h2>Miçangas Encantadas</h2>
+            <p>Preço: $15.99</p>
+        </div>
+        
+        <!-- Adicione mais produtos aqui -->
+    </div>
+
+    <script>
+        let cartItems = [];
+
+        function addToCart(itemName, itemPrice) {
+            cartItems.push({ name: itemName, price: itemPrice });
+            updateCartModal();
+        }
+
+        function updateCartModal() {
+            const cartItemsList = document.getElementById('cartItems');
+            cartItemsList.innerHTML = '';
+
+            cartItems.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - $${item.price}`;
+                cartItemsList.appendChild(li);
+            });
+
+            document.getElementById('cartModal').style.display = 'block';
+        }
+
+        function closeCart() {
+            document.getElementById('cartModal').style.display = 'none';
+        }
+
+        // Fechar o modal se o usuário clicar fora dele
+        window.onclick = function(event) {
+            const modal = document.getElementById('cartModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>

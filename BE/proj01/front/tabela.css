@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 12vh;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    font-family: 'Cinzel', serif;
+}
+
+header{
+    width: 100%;
+    height: 20vh;
+    padding:10px 0 20px 0;
+    background-color: rgb(119, 2, 25);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color:antiquewhite;
+}
+
+main{
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.linkzin{
+    color:antiquewhite;
+    font-family: 'Cinzel', serif;
+    text-decoration: none;
+}
+
+nav{
+    margin:20px 0;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+    margin:0 20px;
+}
+
+table{
+    width: 60vw;
+    height: fit-content;
+    border:1px solid black;
+    text-align: center;
+    border-collapse: collapse;
+    font-weight: bold;
+    border: 4px solid rgb(107, 1, 22);
+    color:antiquewhite;
+}
+
+th{
+    border-bottom:4px solid rgb(112, 1, 24);
+    background-color: antiquewhite;
+    color:rgb(112, 1, 24);
+}
+
+tr{
+    height: 40px;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(112, 1, 24);
+  }
+
+  tr:nth-child(odd) {
+    background-color: rgb(153, 4, 33);
+    color:white
+  }
+
+footer{
+    width: 100vw;
+    padding:10px 0 10px 0;
+    background-color: rgb(119, 2, 25);
+    text-align: center;
+    height: 10vh;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    color:antiquewhite;
+}
