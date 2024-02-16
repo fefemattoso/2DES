@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { ScrollView, StyleSheet, Text, View, Image, TouchableOpacity, Linking } from 'react-native';
 
 export default function App() {
-  const githubLink = 'https://github.com/seu-usuario-do-github';
+  const githubLink = 'https://github.com/fefemattoso';
 
   const openGithubProfile = () => {
     Linking.openURL(githubLink);
@@ -13,7 +13,6 @@ export default function App() {
       <View style={styles.container}>
         <Text style={styles.heading}>My Space</Text>
 
-        {/* Seção: Sobre Mim */}
         <View style={styles.aboutMe}>
           <Text style={styles.aboutMeText}>
             Hello! My name is Maria Fernanda. I'm an enthusiastic React Native developer.
@@ -25,15 +24,14 @@ export default function App() {
               uri: 'https://media.tenor.com/nTp2mZtKqBAAAAAi/too.gif'
             }}
           />
-          <Image
+          {/* <Image
             style={styles.bluey}
             source={{
               uri: 'https://media1.tenor.com/m/FjRekvNoIngAAAAC/bluey-bingo.gif'
             }}
-          />
+          /> */}
         </View>
 
-        {/* Seção: Formação Acadêmica */}
         <View style={styles.education}>
           <Text style={styles.sectionHeading}>Academic education</Text>
           <Text style={styles.educationText}>
@@ -42,26 +40,22 @@ export default function App() {
           </Text>
         </View>
 
-        {/* Seção: Dados Pessoais */}
         <View style={styles.personalDetails}>
           <Text style={styles.sectionHeading}>Personal data</Text>
           <Text style={styles.detailsText}>
-            - Email: mfernandamattoso@gmail.com
-            - Telephone: (19) 97155-6822
+            - Email: sorvetinhodemorango@hotmail.com
+            - Telephone: (11) 97122-6822
           </Text>
         </View>
 
-        {/* Seção: Projetos Recentes */}
         <View style={styles.projects}>
           <Text style={styles.sectionHeading}>Recent Projects</Text>
 
-          {/* Adicione mais projetos conforme necessário */}
           <View style={styles.project}>
-            <Text style={styles.projectText}>Projet 01</Text>
+            <Text style={styles.projectText}>Project 01</Text>
           </View>
         </View>
 
-        {/* Link para o GitHub */}
         <TouchableOpacity onPress={openGithubProfile}>
           <Text style={styles.githubLink}>GitHub Profile</Text>
         </TouchableOpacity>
@@ -77,79 +71,83 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
   container: {
+    display: 'flex',
     flex: 1,
     backgroundColor: '#ffcbdb',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
-    marginTop: 4,
+    marginTop: 4
+  },
+  Text: {
+    fontFamily: 'Arial, sans-serif',
   },
   heading: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 20,
+    marginBottom: 20
   },
   aboutMe: {
-    marginBottom: 20,
+    marginBottom: 20
   },
   aboutMeText: {
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
     fontSize: 16,
-    marginBottom: 20,
+    marginBottom: 20
   },
   morango: {
     width: 235,
     height: 350,
     marginBottom: 10,
-    alignItems: 'center',
+    alignItems: 'center'
   },
   education: {
-    marginBottom: 20,
+    marginBottom: 20
   },
   sectionHeading: {
     fontSize: 20,
     fontWeight: 'bold',
-    marginBottom: 10,
+    marginBottom: 10
   },
   educationText: {
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
-    fontSize: 16,
+    fontSize: 16
   },
   personalDetails: {
-    marginBottom: 20,
+    marginBottom: 20
   },
   detailsText: {
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
-    fontSize: 16,
+    fontSize: 16
   },
   projects: {
-    width: '100%',
+    width: '100%'
   },
   projectHeading: {
     fontSize: 20,
     fontWeight: 'bold',
-    marginBottom: 10,
+    marginBottom: 10
   },
   project: {
-    marginBottom: 20,
+    marginBottom: 20
   },
   bluey: {
     width: '100%',
     height: 200,
-    marginBottom: 10,
+    marginBottom: 10
   },
   projectText: {
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
-    fontSize: 16,
+    fontSize: 16
   },
   githubLink: {
     marginTop: 20,
     color: 'blue',
-    textDecorationLine: 'underline',
+    textDecorationLine: 'underline'
   },
 });
 
