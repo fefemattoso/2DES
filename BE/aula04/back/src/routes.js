@@ -2,11 +2,11 @@
 const express = require("express");
 const router = express.Router();
 
-const Cliente = require("./controllers/item");
+const Item = require("../controllers/item.js");
 
 //Rota de teste
 const teste = (req, res) => {
-    res.json("Back-end, API PapelDino respondendo!");
+    res.json("Back-end, API PapelTudo respondendo!");
 }
 
 //Rotas de Saída - Clientes

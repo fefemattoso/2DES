@@ -21,7 +21,7 @@ function loadItens() {
 
 //CRUD - Read - Renderizar os dados obtidos em uma tabela
 function preencherTabela() {
-    clientes.forEach(cli => {
+    item.forEach(cli => {
         dados.innerHTML += `
                 <tr>
                     <td>${cli.id}</td>
@@ -55,7 +55,7 @@ criar.addEventListener('submit', e => {
         .then(res => res.json())
         .then(res => {
             if (res.sqlMessage == undefined) {
-                clientes.push(res);
+                item.push(res);
                 dados.innerHTML = "";
                 preencherTabela();
                 cadastro.classList.add('oculto');

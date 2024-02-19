@@ -9,7 +9,7 @@
     <title>PapelDino</title>
 </head>
 
-<body onload="loadClientes()">
+<body onload="loadItens()">
     <header>
         <h1>Inventário Papelaria PapelDino</h1>
         <nav>
@@ -31,16 +31,15 @@
         </table>
     </main>
     <footer>
-        <h2>By prof. Wellington & github Copilot</h2>
+        <h2>By Fefê</h2>
     </footer>
     <div class="modal oculto" id="cadastro">
         <div class="janela">
-            <h2>Cadastrar novo cliente</h2>
+            <h2>Cadastrar novo item</h2>
             <form id="criar">
-                <input type="text" name="cpf" placeholder="cpf" required>
-                <input type="text" name="nome" placeholder="nome" required>
-                <input type="text" name="sobrenome" placeholder="sobrenome" required>
-                <input type="date" name="nascimento" placeholder="nascimento" required>
+                <input type="text" name="nome" placeholder="Nome" required>
+                <input type="text" name="descricao" placeholder="Descrição" required>
+                <input type="text" name="valor" placeholder="Valor" required>
                 <input type="submit" value="Enviar">
                 <input type="reset" value="Cancelar" onclick="cadastro.classList.add('oculto')">
             </form>

@@ -1,14 +1,13 @@
 //Dependências - Frameworks
-const con = require("../connect/connect").con;
+const con = require("../connect/connect.js").con;
 
 //CRUD - create
 const create = (req, res) => {
-    let cpf = req.body.cpf;
     let nome = req.body.nome;
-    let sobrenome = req.body.sobrenome;
-    let nascimento = req.body.nascimento;
-    let query = `INSERT INTO clientes(cpf, nome, sobrenome, nascimento) VALUE`;
-    query += `('${cpf}', '${nome}', '${sobrenome}', '${nascimento}');`;
+    let descricao = req.body.descricao;
+    let valor = req.body.valor;
+    let query = `INSERT INTO item(nome, descricao, valor) VALUE`;
+    query += `('${nome}', '${descricao}', '${valor}');`;
     con.query(query, (err, result) => {
         if (err)
             res.status(400).json(err).end();
@@ -22,7 +21,7 @@ const create = (req, res) => {
 
 //CRUD - Read
 const read = (req, res) => {
-    con.query("SELECT * FROM Clientes ORDER BY id DESC", (err, result) => {
+    con.query("SELECT * FROM Item ORDER BY id DESC", (err, result) => {
         if (err)
             res.json(err);
         else
@@ -33,11 +32,10 @@ const read = (req, res) => {
 //CRUD - Update
 const update = (req, res) => {
     let id = req.params.id;
-    let cpf = req.body.cpf;
     let nome = req.body.nome;
-    let sobrenome = req.body.sobrenome;
-    let nascimento = req.body.nascimento;
-    let query = `UPDATE clientes SET cpf = '${cpf}', nome = '${nome}', sobrenome = '${sobrenome}', nascimento = '${nascimento}' WHERE id = ${id}`;
+    let descricao = req.body.descricao;
+    let valor = req.body.valor;
+    let query = `UPDATE item SET cpf = nome = '${nome}', descricao = '${descricao}', valor = '${valor}' WHERE id = ${id}`;
     con.query(query, (err, result) => {
         if (err)
             res.status(400).json(err).end;
@@ -53,7 +51,7 @@ const update = (req, res) => {
 //CRUD - Delete
 const del = (req, res) => {
     let id = req.params.id;
-    con.query(`DELETE FROM Clientes WHERE id = ${id}`, (err, result) => {
+    con.query(`DELETE FROM Item WHERE id = ${id}`, (err, result) => {
         if (err)
             res.status(400).json(err).end();
         else {
