@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./icone.png" type="image/x-icon">
+    <title>Borracharia</title>
+</head>
+
+<body onload="loadItens()">
+    <header>
+        <h1>Inventário Borracharia</h1>
+        <nav>
+            <button onclick="cadastro.classList.remove('oculto')">Novo</button>
+        </nav>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody id="dados">
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <h2>By Fefê</h2>
+    </footer>
+    <div class="modal oculto" id="cadastro">
+        <div class="janela">
+            <h2>Cadastrar novo item</h2>
+            <form id="criar">
+                <input type="text" name="nome" placeholder="Nome" required>
+                <input type="text" name="descricao" placeholder="Descrição" required>
+                <input type="text" name="valor" placeholder="Valor" required>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Cancelar" onclick="cadastro.classList.add('oculto')">
+            </form>
+        </div>
+    </div>
+    <div class="modal oculto" id="msgs">
+        <div class="janela">
+            <h2 id="errTit"></h2>
+            <br>
+            <h3 id="msg"> </h3>
+            <br>
+            <div>
+                <button onclick="window.location.href='./'">Fechar</button>
+                <button id="confirma" class="oculto">Confirma</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
