@@ -83,6 +83,7 @@ thead {
     display: block;
     background: #F38F00;
     color: #fff;
+    border-radius: 40px
 }
 
 thead tr {
@@ -100,9 +101,9 @@ tr:nth-child(even) {
     background: #dddddd;
 }
 
-tr {
+/* tr {
     border-bottom: 1px solid #ccc;
-}
+} */
 
 th,
 td {

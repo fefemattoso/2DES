@@ -14,22 +14,22 @@ function loadItens() {
             // res.forEach(cli => {
             //     clientes.push(cli);
             // });
-            clientes.push(...res);
+            item.push(...res);
             preencherTabela();
         });
 }
 
 //CRUD - Read - Renderizar os dados obtidos em uma tabela
 function preencherTabela() {
-    item.forEach(cli => {
+    item.forEach(item => {
         dados.innerHTML += `
                 <tr>
-                    <td>${cli.id}</td>
-                    <td>${cli.nome}</td>
-                    <td>${cli.descricao}</td>
-                    <td>${cli.valor}</td>
+                    <td>${item.id}</td>
+                    <td>${item.nome}</td>
+                    <td>${item.descricao}</td>
+                    <td>${item.valor}</td>
                     <td>
-                        <button onclick="del(${cli.id})"> - </button>
+                        <button onclick="del(${item.id})"> - </button>
                         <button onclick="edit(this)"> * </button>
                     </td>
                 </tr>
@@ -118,7 +118,7 @@ function confirmar(id) {
 function edit(btn) {
     let linha = btn.parentNode.parentNode;
     let celulas = linha.cells;
-    for (let i = 1; i < celulas.length - 2; i++) {
+    for (let i = 1; i < celulas.length -1; i++) {
         celulas[i].setAttribute('contenteditable', 'true');
     }
     btn.innerHTML = '✔';

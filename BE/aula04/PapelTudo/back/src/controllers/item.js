@@ -21,7 +21,7 @@ const create = (req, res) => {
 
 //CRUD - Read
 const read = (req, res) => {
-    con.query("SELECT * FROM Item ORDER BY id DESC", (err, result) => {
+    con.query("SELECT * FROM item ORDER BY id", (err, result) => {
         if (err)
             res.json(err);
         else
@@ -35,7 +35,7 @@ const update = (req, res) => {
     let nome = req.body.nome;
     let descricao = req.body.descricao;
     let valor = req.body.valor;
-    let query = `UPDATE item SET cpf = nome = '${nome}', descricao = '${descricao}', valor = '${valor}' WHERE id = ${id}`;
+    let query = `UPDATE item SET nome = '${nome}', descricao = '${descricao}', valor = '${valor}' WHERE id = ${id}`;
     con.query(query, (err, result) => {
         if (err)
             res.status(400).json(err).end;
