@@ -6,14 +6,26 @@ const cadastro = document.getElementById('cadastro');
 const uri = "http://localhost:3000/item";
 const item = [];
 
+// Função para adicionar mensagens do sistema na caixa de mensagens
+function addSystemMessage(message) {
+    const systemMessages = document.getElementById('system-messages');
+    const newMessage = document.createElement('div');
+    newMessage.textContent = message;
+    systemMessages.appendChild(newMessage);
+}
+
+// Função para atualizar o patrimônio da loja na caixa correspondente
+function updatePatrimonio() {
+    const patrimonioElement = document.getElementById('patrimonio');
+    const patrimonioTotal = item.reduce((total, currentItem) => total + parseFloat(currentItem.valor), 0);
+    patrimonioElement.textContent = `R$ ${patrimonioTotal.toFixed(2)}`;
+}
+
 //Obter dados do back-end
 function loadItens() {
     fetch(uri)
         .then(res => res.json())
         .then(res => {
-            // res.forEach(cli => {
-            //     clientes.push(cli);
-            // });
             item.push(...res);
             preencherTabela();
         });
@@ -29,12 +41,16 @@ function preencherTabela() {
                     <td>${item.descricao}</td>
                     <td>${item.valor}</td>
                     <td>
-                        <button onclick="del(${item.id})"> - </button>
-                        <button onclick="edit(this)"> * </button>
+                        <button onclick="del(${item.id})"> x </button>
+                        <button onclick="edit(this)"> ✏️ </button>
                     </td>
                 </tr>
             `;
     });
+
+    // Adicione estas linhas para mensagem do sistema e atualização do patrimônio
+    addSystemMessage('Itens carregados na tabela.');
+    updatePatrimonio();
 }
 
 //CRUD - Create
@@ -60,6 +76,10 @@ criar.addEventListener('submit', e => {
                 preencherTabela();
                 cadastro.classList.add('oculto');
                 criar.reset();
+
+                // Adicione estas linhas
+                addSystemMessage('Novo item cadastrado!');
+                updatePatrimonio();
             } else {
                 cadastro.classList.add('oculto');
                 mensagens(res.sqlMessage, 'Erro ao cadastrar item!');
@@ -92,6 +112,10 @@ function update(btn) {
                 celulas[3].removeAttribute('contenteditable');
                 btn.innerHTML = '*';
                 btn.setAttribute('onclick', 'edit(this)');
+
+                // Adicione estas linhas
+                addSystemMessage('Item atualizado!');
+                updatePatrimonio();
             } else {
                 mensagens(res.sqlMessage, 'Erro ao atualizar item!');
             }
