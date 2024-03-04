@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>BioAcademy</title>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">BioAcademy</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#cursos">Cursos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#matricula">Matrícula</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#contatoModal">Contato</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Home Page -->
+<section id="home" class="container mt-5">
+    <h2>Bem-vindo à BioAcademy</h2>
+    <p>Nossos cursos proporcionam uma experiência educacional completa, cobrindo diversas áreas da biologia e permitindo que os alunos mergulhem em estudos especializados de seu interesse. A BioAcademy busca promover o entendimento profundo e a aplicação prática dos princípios biológicos para preparar os alunos para carreiras dinâmicas e inovadoras no campo da biologia.</p>
+    <!-- Adicione aqui informações ou propagandas para atrair o público -->
+</section>
+
+<!-- Cursos -->
+<section id="cursos" class="container mt-5">
+    <h2>Nossos Cursos</h2>
+    <div class="row">
+        <!-- Curso 1 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="assets/Genética.jpg" class="card-img-top" alt="Curso 1">
+                <div class="card-body">
+                    <h5 class="card-title">Curso Avançado em Genética Molecular</h5>
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#curso1Modal">Descrição</a>
+                </div>
+            </div>
+        </div>
+        <!-- Curso 2 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="assets/Ecologia.jpg" class="card-img-top" alt="Curso 2">
+                <div class="card-body">
+                    <h5 class="card-title">Ecologia Aplicada: Conservação e Sustentabilidade</h5>
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#curso2Modal">Descrição</a>
+                </div>
+            </div>
+        </div>
+        <!-- Curso 3 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="assets/Oceanografia.jpg" class="card-img-top" alt="Curso 3">
+                <div class="card-body">
+                    <h5 class="card-title">Biologia Marinha e Oceanografia</h5>
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#curso3Modal">Descrição</a>
+                </div>
+            </div>
+        </div>
+        <!-- Curso 4 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="assets/Neurociência.jpg" class="card-img-top" alt="Curso 4">
+                <div class="card-body">
+                    <h5 class="card-title">Neurociência e Comportamento</h5>
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#curso4Modal">Descrição</a>
+                </div>
+            </div>
+        </div>
+        <!-- Curso 5 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="assets/Biotecnologia.jpg" class="card-img-top" alt="Curso 5">
+                <div class="card-body">
+                    <h5 class="card-title">Biotecnologia e Engenharia Genética</h5>
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#curso5Modal">Descrição</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal Curso 1 -->
+<div class="modal" id="curso1Modal" tabindex="-1" role="dialog" aria-labelledby="curso1ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="curso1ModalLabel">Curso Avançado em Genética Molecular</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body modal-description" id="curso1ModalDescricao">
+                <p>Explore os segredos do código genético, técnicas avançadas de sequenciamento e manipulação de genes para entender as bases moleculares da vida.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Curso 2 -->
+<div class="modal" id="curso2Modal" tabindex="-1" role="dialog" aria-labelledby="curso2ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="curso2ModalLabel">Ecologia Aplicada: Conservação e Sustentabilidade</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body modal-description" id="curso2ModalDescricao">
+                <p>Aprofunde seus conhecimentos sobre ecossistemas, biodiversidade e desenvolva estratégias práticas para a conservação da natureza e promoção da sustentabilidade.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Curso 3 -->
+<div class="modal" id="curso3Modal" tabindex="-1" role="dialog" aria-labelledby="curso3ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="curso3ModalLabel">Biologia Marinha e Oceanografia</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body modal-description" id="curso3ModalDescricao">
+                <p>Descrição: Mergulhe nas profundezas do mundo marinho, estudando ecossistemas aquáticos, biodiversidade marinha, e os desafios da preservação dos oceanos.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Curso 4 -->
+<div class="modal" id="curso4Modal" tabindex="-1" role="dialog" aria-labelledby="curso4ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="curso1ModalLabel">Neurociência e Comportamento</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body modal-description" id="curso4ModalDescricao">
+                <p>Explore os mistérios do sistema nervoso, compreendendo a relação entre estrutura cerebral e comportamento humano, além de abordar questões ligadas à saúde mental.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Curso 5 -->
+<div class="modal" id="curso5Modal" tabindex="-1" role="dialog" aria-labelledby="curso5ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="curso1ModalLabel">Biotecnologia e Engenharia Genética</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body modal-description" id="curso5ModalDescricao">
+                <p>Adquira habilidades práticas em manipulação genética, clonagem e desenvolvimento de organismos geneticamente modificados, explorando as aplicações da biotecnologia na medicina, agricultura e indústria.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Botão de Abertura do Modal de Matrícula -->
+<section id="matricula" class="container mt-5">
+    <h2>Matrícula</h2>
+    <form>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#matriculaModal">
+            Matricular-se Agora
+        </button>
+    </form>
+</section>
+
+<!-- Modal de Matrícula -->
+<div class="modal" id="matriculaModal" tabindex="-1" role="dialog" aria-labelledby="matriculaModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="matriculaModalLabel">Matrícula</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="nomeAluno">Nome do Aluno:</label>
+                        <input type="text" class="form-control" id="nomeAluno" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailAluno">Email do Aluno:</label>
+                        <input type="email" class="form-control" id="emailAluno" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cursoSelectModal">Selecione o Curso:</label>
+                        <select class="form-control" id="cursoSelectModal">
+                            <!-- Adicione opções dos cursos aqui -->
+                            <option value="curso1">Curso Avançado em Genética Molecular</option>
+                            <option value="curso2">Ecologia Aplicada: Conservação e Sustentabilidade</option>
+                            <option value="curso3">Biologia Marinha e Oceanografia</option>
+                            <option value="curso4">Neurociência e Comportamento</option>
+                            <option value="curso5">Biotecnologia e Engenharia Genética</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Matricular-se</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Contato Modal -->
+<div class="modal" id="contatoModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Entre em Contato</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" class="form-control" id="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea class="form-control" id="mensagem" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Seu script personalizado -->
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
