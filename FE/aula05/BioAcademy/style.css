@@ -1,21 +1,37 @@
 body {
-    background-color: #6b9c18;
+    background-color: #abc77a;
     color: #333;
     align-items: center;
 }
 
-header
-
 .navbar {
-    background-color: #e1afba;
+    background-color: #4f791f;
 }
 
+/* .logo-titulo{
+    display: flex;
+    justify-content: space-between;
+} */
+
 .container {
-    background-color: #ffffff;
+    background-color: #fffadb;
     margin-top: 20px;
     border-radius: 8px;
-    padding: 20px;
+    padding: 60px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.mt-5{
+    align-items: center;
+    text-align: center;
+}
+
+#home{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 #matricula{
@@ -26,33 +42,39 @@ header
 }
 
 .card {
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(238, 52, 52, 0.1);
+    background-color: #fdefc8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    padding: 10px;
+    height: 97%;
 }
 
+/* .col-md-4{
+    height: 100%;
+} */
+
 .btn-primary {
-    background-color: #35a3c2;
-    border-color: #35a3c2;
+    background-color: #4f791f;
+    border-color: #4f791f;
     align-items: center;
     display: flex;
     justify-content: center;
 }
 
 .btn-primary:hover {
-    background-color: #35a3c2;
-    border-color: #42a5f5;
+    background-color: #bce275;
+    border-color: #bce275;
 }
 
 .modal-content {
-    background-color: #ffffff;
+    background-color: #fffadb;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .modal-header {
     background-color: #6b9c18;
-    color: #ffffff;
+    color: #d1e7aa;
     border-bottom: none;
 }
 
@@ -60,3 +82,22 @@ header
     background-color: #6b9c18;
 }
 
+.btn-secondary{
+    background-color: #abc77a;
+    border-color: #abc77a;
+}
+
+.btn-secondary:hover{
+    background-color: #bce275;
+    border-color: #bce275;
+}
+
+.mt-6{
+    align-items: center;
+    text-align: center;
+    background-color: #fffadb;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

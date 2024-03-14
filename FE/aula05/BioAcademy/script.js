@@ -3,7 +3,6 @@ function exibirDescricaoCurso(curso) {
     document.getElementById(`${curso}ModalDescricao`).innerHTML = descricao;
 }
 
-// Evento de exibição da descrição no modal
 document.addEventListener('DOMContentLoaded', function () {
     // Substitua 'cursoX' pelos identificadores reais dos seus cursos
     ['curso1', 'curso2', 'curso3', 'curso4', 'curso5'].forEach(function (curso) {
@@ -13,20 +12,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Aguarde o DOM ser carregado
 document.addEventListener("DOMContentLoaded", function () {
-    // Adicione um ouvinte de evento ao formulário
+   
     document.querySelector('form').addEventListener('submit', function (event) {
         // Impede o envio padrão do formulário
         event.preventDefault();
 
-        // Obtenha os dados do formulário
         var nomeAluno = document.getElementById('nomeAluno').value;
         var emailAluno = document.getElementById('emailAluno').value;
         var cursoSelecionado = document.getElementById('cursoSelectModal').value;
 
-        // Simule o envio do formulário (substitua por sua lógica real de matrícula)
-        // Aqui, estamos apenas exibindo a mensagem de sucesso após um pequeno atraso (simulando uma solicitação assíncrona)
+       
         setTimeout(function () {
             exibirMensagemSucesso();
         }, 1000);
