@@ -1,0 +1,3 @@
+Funcionario(matricula[chave primaria], nome, telefone)
+Veiculo(placa[chave primaria], modelo, marca, ano)
+Manutencao(id_matricula[chave primaria],inicioManutencao, fimManutencao, descricao, matricula[chave primaria referencia Funcionario(matricula)], placa[chave primaria referencia Veiculo(placa)])

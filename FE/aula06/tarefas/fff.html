@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Tarefas</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #fce4ec; /* Cor-de-rosa claro */
+    }
+    .container {
+      margin-top: 50px;
+    }
+    .task-container {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="text-center">Gerenciador de Tarefas</h1>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="input-group mb-3">
+        <input id="taskInput" type="text" class="form-control" placeholder="Digite sua tarefa...">
+        <div class="input-group-append">
+          <button id="addTaskBtn" class="btn btn-primary">Adicionar Tarefa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="taskList" class="task-container">
+    <!-- Lista de tarefas será inserida aqui -->
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  document.getElementById('addTaskBtn').addEventListener('click', function() {
+    var taskInput = document.getElementById('taskInput');
+    var task = taskInput.value.trim();
+    if (task !== '') {
+      addTask(task);
+      taskInput.value = '';
+    }
+  });
+
+  function addTask(task) {
+    var taskList = document.getElementById('taskList');
+    var newTaskItem = document.createElement('div');
+    newTaskItem.className = 'alert alert-warning alert-dismissible fade show';
+    newTaskItem.setAttribute('role', 'alert');
+    newTaskItem.innerHTML = `
+      ${task}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>`;
+    taskList.appendChild(newTaskItem);
+  }
+</script>
+
+</body>
+</html>

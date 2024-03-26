@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja Monster High</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #333;
+      color: #fff;
+    }
+    .card {
+      background-color: #555;
+      color: #fff;
+    }
+    .btn-primary,
+    .btn-primary:hover {
+      background-color: #ff00ff;
+      border-color: #ff00ff;
+    }
+    .btn-danger,
+    .btn-danger:hover {
+      background-color: #800080;
+      border-color: #800080;
+    }
+    .btn-info,
+    .btn-info:hover {
+      background-color: #0000ff;
+      border-color: #0000ff;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Loja Monster High</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#cartModal">Carrinho</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Contato</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container mt-5">
+  <div class="row">
+    <!-- Products -->
+    <div class="col-lg-9">
+      <h2>Produtos</h2>
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="imagem1.jpg" class="card-img-top" alt="Produto 1">
+            <div class="card-body">
+              <h5 class="card-title">Produto 1</h5>
+              <p class="card-text">Descrição do Produto 1.</p>
+              <p class="card-text">R$ 20,00</p>
+              <button class="btn btn-primary btn-block">Adicionar ao Carrinho</button>
+            </div>
+          </div>
+        </div>
+        <!-- Adicione mais produtos aqui -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cart Modal -->
+<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cartModalLabel">Carrinho de Compras</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Conteúdo do carrinho aqui -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Finalizar Compra</button>
+        <button type="button" class="btn btn-danger">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">Entre em Contato</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Formulário de contato aqui -->
+        <form>
+          <div class="form-group">
+            <label for="name">Nome:</label>
+            <input type="text" class="form-control" id="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+          <div class="form-group">
+            <label for="message">Mensagem:</label>
+            <textarea class="form-control" id="message" rows="3"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Enviar</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+      // Array para armazenar os itens do carrinho
+      let cartItems = [];
+  
+      // Adicionar ao carrinho
+      $('.addToCartBtn').click(function() {
+        let productTitle = $(this).closest('.card').find('.card-title').text();
+        let productPrice = $(this).closest('.card').find('.card-text').text();
+  
+        cartItems.push({ title: productTitle, price: productPrice });
+        updateCart();
+      });
+  
+      // Atualizar o modal do carrinho
+      function updateCart() {
+        $('#cartItemsList').empty();
+        cartItems.forEach(function(item, index) {
+          $('#cartItemsList').append('<li class="list-group-item">' + item.title + ' - ' + item.price + ' <button class="btn btn-danger btn-sm float-right deleteItemBtn" data-index="' + index + '">Excluir</button></li>');
+        });
+      }
+  
+      // Excluir item do carrinho
+      $(document).on('click', '.deleteItemBtn', function() {
+        let index = $(this).data('index');
+        cartItems.splice(index, 1);
+        updateCart();
+      });
+  
+      // Finalizar compra (limpar carrinho)
+      $('#checkoutBtn').click(function() {
+        cartItems = [];
+        updateCart();
+        $('#cartModal').modal('hide');
+      });
+  
+      // Enviar formulário de contato (apenas simulação)
+      $('#contactForm').submit(function(e) {
+        e.preventDefault();
+        alert('Mensagem enviada!');
+        $('#contactModal').modal('hide');
+      });
+    });
+  </script>
+
+</body>
+</html>
