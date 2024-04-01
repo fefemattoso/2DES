@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Previsão do Tempo</title>
+    <title>Daily Check</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="homestyle.css">
@@ -20,7 +20,7 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand text-dark" href="#">Minhas tarefas diárias</a>
+        <a class="navbar-brand text-dark" href="#">Daily Check</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -31,7 +31,10 @@
                     <a class="nav-link text-dark" href="index.html">Tempo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="#contactModal" data-toggle="modal">Contato</a>
+                    <a class="nav-link text-dark" href="#contactModal" data-toggle="modal">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#tasksModal" data-toggle="modal">Tasks</a>
                 </li>
             </ul>
         </div>
@@ -51,7 +54,7 @@
     <div class="card" style="width: 18rem; height: 55vh;">
         <img class="card-img-top" src="assets/study.jpg" alt="Imagem de capa do card">
         <div class="card-body">
-            <h5 class="card-title">Estudo</h5>
+            <h5 class="card-title">Study</h5>
             <a href="#" class="btn btn-primary complete-task-btn" data-toggle="modal" data-target="#studyModal" style="background-color: palevioletred; border: none;">Concluir</a>
         </div>
     </div>
@@ -60,7 +63,7 @@
     <div class="card" style="width: 18rem; height: 55vh;">
         <img class="card-img-top" src="assets/read2.jpg" alt="Imagem de capa do card">
         <div class="card-body">
-            <h5 class="card-title">Leitura</h5>
+            <h5 class="card-title">Read</h5>
             <a href="#" class="btn btn-primary complete-task-btn" data-toggle="modal" data-target="#readModal" style="background-color: palevioletred; border: none;">Concluir</a>
         </div>
     </div>
@@ -69,7 +72,7 @@
     <div class="card" style="width: 18rem; height: 55vh;">
         <img class="card-img-top" src="assets/bbf8770b5642cbd1e78f0618e145b61a.jpg" alt="Imagem de capa do card">
         <div class="card-body">
-            <h5 class="card-title">Exercícios</h5>
+            <h5 class="card-title">Gym</h5>
             <a href="#" class="btn btn-primary complete-task-btn" data-toggle="modal" data-target="#gymModal" style="background-color: palevioletred; border: none;">Concluir</a>
         </div>
     </div>
@@ -106,7 +109,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="studyModalLabel">Estudo</h5>
+                <h5 class="modal-title" id="studyModalLabel">Study</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -128,7 +131,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="readModalLabel">Leitura</h5>
+                <h5 class="modal-title" id="readModalLabel">Read</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -150,7 +153,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="readModalLabel">Exercícios</h5>
+                <h5 class="modal-title" id="readModalLabel">Gym</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -171,7 +174,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="contactModalLabel">Contato</h5>
+          <h5 class="modal-title" id="contactModalLabel">Contact</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -196,6 +199,28 @@
             </div>
             <button type="submit" class="btn btn-primary" style="background-color: palevioletred; border: none;">Enviar</button>
           </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Tasks Modal -->
+  <div class="modal fade" id="tasksModal" tabindex="-1" role="dialog" aria-labelledby="tasksModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="tasksModalLabel">Tasks</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="display: flex; justify-content: center;">
+          <ol>
+            <li>Skincare - 8:00AM</li>
+            <li>Study - 12:30PM</li>
+            <li>Read -  6:00PM</li>
+            <li>Gym - 8:00PM</li>
+          </ol>
         </div>
       </div>
     </div>
