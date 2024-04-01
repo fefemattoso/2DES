@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do Tempo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="homestyle.css">
+    <script src="script.js"></script>
+    <style>
+        /* Style for completed tasks */
+        .completed-task {
+            opacity: 0.6; /* Reduce opacity to indicate completion */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand text-dark" href="#">Minhas tarefas diárias</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="index.html">Tempo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#contactModal" data-toggle="modal">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="card-conteiner">
+    <!-- Card 1 -->
+    <div class="card" style="width: 18rem; height: 55vh;">
+        <img class="card-img-top" src="assets/skincare.jpg" alt="Imagem de capa do card">
+        <div class="card-body">
+            <h5 class="card-title">Skincare</h5>
+            <a href="#" class="btn btn-primary complete-task-btn" data-toggle="modal" data-target="#skincareModal" style="background-color: palevioletred; border: none;">Concluir</a>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card" style="width: 18rem; height: 55vh;">
+        <img class="card-img-top" src="assets/study.jpg" alt="Imagem de capa do card">
+        <div class="card-body">
+            <h5 class="card-title">Estudo</h5>
+            <a href="#" class="btn btn-primary complete-task-btn" data-toggle="modal" data-target="#studyModal" style="background-color: palevioletred; border: none;">Concluir</a>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card" style="width: 18rem; height: 55vh;">
+        <img class="card-img-top" src="assets/read2.jpg" alt="Imagem de capa do card">
+        <div class="card-body">
+            <h5 class="card-title">Leitura</h5>
+            <a href="#" class="btn btn-primary complete-task-btn" data-toggle="modal" data-target="#readModal" style="background-color: palevioletred; border: none;">Concluir</a>
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card" style="width: 18rem; height: 55vh;">
+        <img class="card-img-top" src="assets/bbf8770b5642cbd1e78f0618e145b61a.jpg" alt="Imagem de capa do card">
+        <div class="card-body">
+            <h5 class="card-title">Exercícios</h5>
+            <a href="#" class="btn btn-primary complete-task-btn" data-toggle="modal" data-target="#gymModal" style="background-color: palevioletred; border: none;">Concluir</a>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Modals -->
+
+<!-- Skincare Modal -->
+<div class="modal fade" id="skincareModal" tabindex="-1" role="dialog" aria-labelledby="skincareModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="skincareModalLabel">Skincare</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Iniciar às 8:30, duração de 1 hora
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <!-- <button type="button" class="btn btn-primary">Salvar mudanças</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Study Modal -->
+<div class="modal fade" id="studyModal" tabindex="-1" role="dialog" aria-labelledby="studyModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="studyModalLabel">Estudo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Iniciar às 12:30, duração de 5 horas, término às 17:30
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <!-- <button type="button" class="btn btn-primary">Salvar mudanças</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Read Modal -->
+<div class="modal fade" id="readModal" tabindex="-1" role="dialog" aria-labelledby="readModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="readModalLabel">Leitura</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Iniciar às 18:00, duração de 1 hora e meia, término às 19:30
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <!-- <button type="button" class="btn btn-primary">Salvar mudanças</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Gym Modal -->
+<div class="modal fade" id="gymModal" tabindex="-1" role="dialog" aria-labelledby="gymModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="readModalLabel">Exercícios</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Iniciar às 20:00, duração de 1 hora, término às 21:00
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <!-- <button type="button" class="btn btn-primary">Salvar mudanças</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Contato Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Contato</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="nomeContato">Nome</label>
+              <input type="text" class="form-control" id="nomeContato" placeholder="Digite seu nome">
+            </div>
+            <div class="form-group">
+              <label for="telefoneContato">Telefone</label>
+              <input type="tel" class="form-control" id="telefoneContato" placeholder="Digite seu telefone">
+            </div>
+            <div class="form-group">
+              <label for="emailContato">Email</label>
+              <input type="email" class="form-control" id="emailContato" placeholder="Digite seu email">
+            </div>
+            <div class="form-group">
+              <label for="mensagemContato">Mensagem</label>
+              <textarea class="form-control" id="mensagemContato" rows="3" placeholder="Digite sua mensagem"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="background-color: palevioletred; border: none;">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <footer class="navbar navbar-light bg-light" style="padding-top: 60px; margin-top: 150px; text-align: start; align-items: center; display: flex; justify-content: center; height: 135px; text-align: center;">
+    <h1 class="navbar-brand text-dark" href="#" style="font-size: 25px; margin-bottom: 10px;">By Fefê</h1>
+</footer> -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.complete-task-btn').click(function () {
+                $(this).closest('.card').addClass('completed-task');
+            });
+        });
+    </script>
+    
+</body>
+
+</html>

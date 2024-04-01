@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do Tempo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand text-dark" href="#">Gerenciamento de Tarefas</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#contactModal" data-toggle="modal">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="caixa-maior">
+        <div class="form-group" style="display: flex; justify-content: space-around;  align-items: center; ">
+            <input type="text" class="form-control input-cidade" placeholder="Digite o nome da Cidade">
+            <button class="btn btn-primary botao-busca" onclick="cliqueiNoBotao()">
+                <img class="img-busca" alt="busca" src="https://www.svgrepo.com/show/488200/find.svg">
+            </button>
+        </div>
+        
+        <div class="caixa-media"></div>
+        <h2 class="cidade">Tempo em São Paulo</h2>
+        <p class="temp">21º C</p>
+
+        <div class="caixa-menor">
+            <img class="img-previsao" alt="icone-info-tempo" src="https://openweathermap.org/img/wn/04n.png">
+            <p class="texto-previsao">Nublado</p>
+        </div>
+        <p class="umidade"> Umidade: 76%</p>
+    </div>
+
+    <!-- Contato Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Contato</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="nomeContato">Nome</label>
+              <input type="text" class="form-control" id="nomeContato" placeholder="Digite seu nome">
+            </div>
+            <div class="form-group">
+              <label for="telefoneContato">Telefone</label>
+              <input type="tel" class="form-control" id="telefoneContato" placeholder="Digite seu telefone">
+            </div>
+            <div class="form-group">
+              <label for="emailContato">Email</label>
+              <input type="email" class="form-control" id="emailContato" placeholder="Digite seu email">
+            </div>
+            <div class="form-group">
+              <label for="mensagemContato">Mensagem</label>
+              <textarea class="form-control" id="mensagemContato" rows="3" placeholder="Digite sua mensagem"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="background-color: palevioletred; border: none;">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
