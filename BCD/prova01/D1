@@ -1,0 +1,32 @@
+Tabela Clientes:
+cpf_cliente: Chave primária
+nome_cliente: Nome do cliente
+telefone: Número(s) de telefone do cliente
+
+Tabela Carros:
+placa: Chave primária
+modelo: Modelo do carro
+marca: Marca do carro
+tipo: Tipo de carro (standart, utilitario, esportivo)
+diaria: Valor da diária
+reserva: Data de reserva
+retirada: Data de retirada
+devolucao: Data de devolução
+dias: Número de dias de locação
+status: Status da locação (concluído, alugado, reservado)
+subtotal: Valor subtotal da locação
+
+Tabela Alugueis:
+placa: Chave estrangeira referenciando Carros
+cpf_cliente: Chave estrangeira referenciando Clientes
+reserva: Data de reserva
+retirada: Data de retirada
+devolucao: Data de devolução
+dias: Número de dias de locação
+status: Status da locação (alugado)
+subtotal: Valor subtotal da locação
+
+Tabela Reservas:
+placa: Chave estrangeira referenciando Carros
+cpf_cliente: Chave estrangeira referenciando Clientes
+reserva: Data de reserva
