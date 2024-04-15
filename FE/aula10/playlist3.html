@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alegriiiia</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Escuta aí!</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#aboutModal">Quem somos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#requestModal">Peça sua música</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h1>alegriiiia</h1>
+        <div class="player">
+            <div class="cover-container">
+                <img src="assets/playlist3.jpg" class="card-img-top" alt="Imagem de capa">
+            </div>
+            <audio id="audioPlayer" controls>
+            <source src="song.mp3" type="audio/mpeg">
+            </audio>
+            <div class="controls">
+                <button id="prevButton" class="btn btn-primary">Anterior</button>
+                <button id="playPauseButton" class="btn btn-primary">Play/Pause</button>
+                <button id="nextButton" class="btn btn-primary">Próximo</button>
+            </div>
+        </div>
+        <div class="playlist">
+            <h2>Playlist</h2>
+            <ul id="playlist" class="list-group">
+                <li data-src="mp3/Monster High Fright Song.mp3" class="song-item list-group-item">
+                    <img src="assets/mhfs.jpg" class="coverImage" alt="Album Cover">
+                    Monster High Fright Song
+                </li>
+                <li data-src="mp3/We Are Monster-Monster High.mp3" class="song-item list-group-item">
+                    <img src="assets/wrmh.jpg" class="coverImage" alt="Album Cover">
+                    We Are Monster High
+                </li>
+                <li data-src="mp3/01 Rotten to the Core.mp3" class="song-item list-group-item">
+                    <img src="assets/rttc.jpg" class="coverImage" alt="Album Cover">
+                    Rotten to the Core
+                </li>
+                <li data-src="mp3/Ever After High Theme.mp3" class="song-item list-group-item">
+                    <img src="assets/eah.jpg" class="coverImage" alt="Album Cover">
+                    Ever After High Theme
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="aboutModalLabel">Quem somos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>A Escuta aí! LTDA é uma empresa dedicada a proporcionar experiências musicais envolventes e acessíveis para todos os amantes da música. Nosso objetivo é criar um ambiente onde as pessoas possam descobrir novos artistas, explorar diferentes gêneros musicais e compartilhar suas músicas favoritas com amigos e familiares.
+
+                        Com uma ampla gama de playlists cuidadosamente selecionadas, oferecemos uma variedade de opções para atender aos gostos musicais de todos. Desde os clássicos atemporais até os lançamentos mais recentes, estamos comprometidos em oferecer uma experiência de audição única e gratificante para nossos usuários.
+                        
+                        Além disso, valorizamos a interação e o envolvimento da comunidade, permitindo que nossos usuários solicitem músicas, compartilhem suas playlists personalizadas e se conectem com outros apaixonados por música em nossa plataforma.
+                        
+                        Na Escuta aí! LTDA, acreditamos que a música tem o poder de inspirar, unir e transformar vidas, e estamos dedicados a tornar essa experiência musicalmente enriquecedora acessível a todos. Seja bem-vindo(a) ao mundo da música com a Escuta aí! LTDA.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="requestModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="requestModalLabel">Peça sua música</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="song">Nome da música</label>
+                            <input type="text" class="form-control" id="song" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
