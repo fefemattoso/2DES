@@ -14,8 +14,8 @@ export default function App() {
       <Tab.Navigator
         initialRouteName="Home"
         activeColor="#a52a2a"
-        inactiveColor="#3e2465"
-        barStyle={{ backgroundColor: '#C1FFC1' }}
+        inactiveColor="#f5f5f5"
+        barStyle={{ backgroundColor: '#050805' }}
       >
         <Tab.Screen
           name="Home"
