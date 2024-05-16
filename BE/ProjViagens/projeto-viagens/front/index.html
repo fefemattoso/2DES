@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Viagens</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        #destinos-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        #destinos-list li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Destinos de Viagem</h1>
+
+    <ul id="destinos-list"></ul>
+
+    <script>
+        // Função para carregar destinos de viagem via AJAX
+        function carregarDestinos() {
+            const xhr = new XMLHttpRequest();
+
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    const destinos = JSON.parse(xhr.responseText);
+
+                    const destinosList = document.getElementById('destinos-list');
+                    destinosList.innerHTML = '';
+
+                    destinos.forEach(destino => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = destino.nome;
+                        destinosList.appendChild(listItem);
+                    });
+                } else {
+                    console.error('Erro ao carregar destinos:', xhr.status);
+                }
+            };
+
+            xhr.open('GET', 'http://localhost:3001/api/destinos', true);
+            xhr.send();
+        }
+
+        // Chamar a função para carregar destinos ao carregar a página
+        window.onload = function() {
+            carregarDestinos();
+        };
+    </script>
+</body>
+</html>

@@ -19,6 +19,23 @@ const read = async (req, res) => {
     res.status(201).json(cliente).end();
 }
 
+const getById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const cliente = await prisma.clientes.findUnique({
+            where: { id: parseInt(id) }
+        });
+
+        if (!cliente) {
+            res.status(404).json({ error: 'Cliente não encontrado' });
+        } else {
+            res.status(200).json(cliente);
+        }
+    } catch (error) {
+        res.status(500).json({ error: 'Erro ao buscar cliente' });
+    }
+}
+
 const del = async(req, res) =>{
     const cliente =  await prisma.clientes.delete({
         where:{
@@ -47,4 +64,5 @@ module.exports = {
     read,
     del,
     update,
+    getById
 }

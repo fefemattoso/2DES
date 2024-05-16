@@ -10,6 +10,7 @@ router.get('/', (req, res) => {
 
 router.post('/clientes', clientes.create);
 router.get('/clientes', clientes.read);
+router.get('/clientes/:id', clientes.getById);
 router.delete('/clientes/:id', clientes.del);
 router.put('/clientes/:id', clientes.update);
 
