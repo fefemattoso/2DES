@@ -1,0 +1,158 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff295f, #ff97b1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+    margin: 0;
+    color: #fff;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
+    animation: fadeInDown 1s ease-in-out;
+    color: #333;
+}
+
+main {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    width: 100%;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.content, .finish {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.content.active, .finish.active {
+    display: flex;
+}
+
+.spnQtd {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.question {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.answers {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button.answer {
+    width: 100%;
+    padding: 15px;
+    background: #e4ba5f;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+   
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+button.answer:hover {
+    background: #ff4e98;
+    transform: scale(1.05);
+}
+
+.finish span {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 20px;
+    background: #4caf50;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+button:hover {
+    background: #388e3c;
+    transform: scale(1.05);
+}
+
+.results {
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.result-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out;
+    font-size: 1em;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.result-item strong {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
