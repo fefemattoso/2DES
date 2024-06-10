@@ -1,0 +1,123 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(121, 28, 28);
+    color: #fff;
+}
+
+/* Container */
+.container {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Controls */
+.controls button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #c73333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #ffe08a;
+}
+
+/* Playlist */
+.playlist {
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.playlist ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.playlist li {
+    padding: 10px;
+    border-bottom: 1px solid #881818;
+    cursor: pointer;
+    background-color: #bd2929;
+    border-radius: 30px;
+    margin: 5px 0;
+    transition: background-color 0.3s ease;
+}
+
+.playlist li:hover {
+    background-color: #741e1e;
+}
+
+/* Song Item */
+.song-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.cover-image, .coverImage {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.coverImage {
+    width: 100px;
+    height: 100px;
+}
+
+.card-img-top {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .controls button {
+        margin: 5px;
+        padding: 8px 16px;
+    }
+
+    .playlist li {
+        padding: 8px;
+        width: auto;
+        border-radius: 20px;
+    }
+
+    .cover-image, .coverImage {
+        width: 40px;
+    }
+
+    .coverImage {
+        width: 80px;
+        height: 80px;
+    }
+
+    .card-img-top {
+        width: 75%;
+    }
+}

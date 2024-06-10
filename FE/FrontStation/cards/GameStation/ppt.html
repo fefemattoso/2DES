@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, Papel, Tesoura, Lagarto e Spok</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Pedra, Papel, Tesoura, Lagarto e Spok</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../../FrontStation.html">Home</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <header class="introducao">
+        <img src="./images/logogame2.png" style="height: auto; width: 230px; border-radius: 40px;" alt="">
+        <div class ="placar">
+            <h2 class="score" >Pontos</h2>
+            <p class="pontuacao">0</p>
+        </div>
+    </header>
+    <!--Inicio-->
+    <main class ="jogo">
+        <img class="triangulo" src="./images/pentagram.png" alt="">
+        <!--Botão Papel-->
+        <div class="conteiner conteiner-papel" onclick="jogar(papel)">
+        <button value="papel" class="opcao papel"><img src="./images/icon-paper.svg"alt="">
+        </button>
+        </div>
+        <!--Botão Tesoura-->
+        <div class ="conteiner conteiner-tesoura" onclick="jogar(tesoura)">
+        <button value="tesoura" class="opcao tesoura"><img src="./images/icon-scissors.svg" alt="">
+        </button>
+        </div>
+        <!--Botão Pedra-->
+        <div class="conteiner conteiner-pedra" onclick="jogar(pedra)">
+        <button value="pedra" class="opcao pedra"><img src="./images/icon-rock.svg" alt="">
+        </button>
+        </div>
+        
+        <div class ="conteiner conteiner-spok" onclick="jogar(spok)">
+        <button value="spok" class="opcao spok"><img src="./images/spock.png" alt="">
+        </button>
+        </div>
+        <!--Botão Pedra-->
+        <div class="conteiner conteiner-lagarto" onclick="jogar(lagarto)">
+        <button value="lizzard" class="opcao lagarto"><img src="./images/lizzard.png" alt="">
+        </button>
+        </div>
+        
+
+        </main>   
+        <!--Regras-->
+        <div id="regra" class="regras">
+            <div class="regras-titulo">
+                <h1>Regras</h1>
+                <button onclick="fecharRegras()"><img src="./images/icon-close.svg" alt=""></button>
+            </div>
+            <img src="./images/regras.jpg" alt="">
+            </div>
+            <!--gameplay-->
+            <div class="gameplay">
+                <div class ="player display">
+                <h2 class="persona">Você Escolheu</h2>
+                <p class="test"></p>
+                <h2 class="persona1">Você Escolheu</h2>
+            </div>
+            <div class="fim">
+                <p class="result"></p>
+                <button class="playAgain" onclick="reset()">Jogar Novamente</button>
+            </div>
+            <div class="house display">
+                <h2 class="persona"> O Computador Escolheu</h2>
+                <p class="test1"></p>
+                <h2 class="persona1"> O Computador Escolheu</h2>
+            </div>
+            </div>
+            <button class="regras-button" onclick="mostrarregras()">Regras</button>
+            <script src="script.js"></script>
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

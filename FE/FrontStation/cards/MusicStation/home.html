@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escuta aí!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Escuta aí!</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../../FrontStation.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Player</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#aboutModal">Quem somos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#requestModal">Peça sua música</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card" style="border-radius: 50px;">
+                    <img src="assets/playlist1.jpg" class="card-img-top" alt="Imagem de capa" style="border-radius: 50px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Domingo a noite</h5>
+                        <p class="card-text">Confira a playlist 1</p>
+                        <a href="playlist1.html" class="btn btn-dark">Ir para Playlist 1</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card" style="border-radius: 50px;">
+                    <img src="https://w0.peakpx.com/wallpaper/993/145/HD-wallpaper-viking-skull-red-symbol-art-darkarts-skull-arts-radoen-viking.jpg" class="card-img-top" alt="Imagem de capa" style="border-radius: 50px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Vikings do rock</h5>
+                        <p class="card-text">Confira a playlist 2</p>
+                        <a href="playlist2.html" class="btn btn-dark">Ir para Playlist 2</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card" style="border-radius: 50px;">
+                    <img src="https://64.media.tumblr.com/8d4448a83e26935b07d6e86ea4ffe544/04242960ed27d59a-32/s1280x1920/99b09428d84564b70a1fb98bc43ff55a92b69c64.jpg" class="card-img-top" alt="Imagem de capa" style="border-radius: 50px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Alegria <3</h5>
+                        <p class="card-text">Confira a playlist 3</p>
+                        <a href="playlist3.html" class="btn btn-dark">Ir para Playlist 3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="aboutModalLabel">Quem somos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>A Escuta aí! LTDA é uma empresa dedicada a proporcionar experiências musicais envolventes e acessíveis para todos os amantes da música. Nosso objetivo é criar um ambiente onde as pessoas possam descobrir novos artistas, explorar diferentes gêneros musicais e compartilhar suas músicas favoritas com amigos e familiares.
+
+                        Com uma ampla gama de playlists cuidadosamente selecionadas, oferecemos uma variedade de opções para atender aos gostos musicais de todos. Desde os clássicos atemporais até os lançamentos mais recentes, estamos comprometidos em oferecer uma experiência de audição única e gratificante para nossos usuários.
+                        
+                        Além disso, valorizamos a interação e o envolvimento da comunidade, permitindo que nossos usuários solicitem músicas, compartilhem suas playlists personalizadas e se conectem com outros apaixonados por música em nossa plataforma.
+                        
+                        Na Escuta aí! LTDA, acreditamos que a música tem o poder de inspirar, unir e transformar vidas, e estamos dedicados a tornar essa experiência musicalmente enriquecedora acessível a todos. Seja bem-vindo(a) ao mundo da música com a Escuta aí! LTDA.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="requestModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="requestModalLabel">Peça sua música</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="song">Nome da música</label>
+                            <input type="text" class="form-control" id="song" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
