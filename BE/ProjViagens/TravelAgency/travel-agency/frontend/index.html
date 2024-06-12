@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./icone.png" type="image/x-icon">
+    <title>Agência de Viagens</title>
+</head>
+
+<body onload="loadDestinos()">
+    <header>
+        <h1>Agência de Viagens</h1>
+        <nav>
+            <button onclick="toggleModal('cadastroDestino')">Novo Destino</button>
+            <button onclick="toggleModal('cadastroHotel')">Novo Hotel</button>
+            <button onclick="toggleModal('cadastroPontoTuristico')">Novo Ponto Turístico</button>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Destinos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="destinos"></tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Hotéis</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Endereço</th>
+                        <th>ID do Destino</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="hoteis"></tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Pontos Turísticos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>ID do Destino</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="pontosTuristicos"></tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <div class="messages-box">
+            <h2>Mensagens do Sistema</h2>
+            <div id="system-messages">
+                <!-- Mensagens do sistema serão exibidas aqui -->
+            </div>
+        </div>
+    </footer>
+    <div class="modal oculto" id="cadastroDestino">
+        <div class="janela">
+            <h2>Cadastrar novo destino</h2>
+            <form id="criarDestino" onsubmit="criarDestino(event)">
+                <input type="text" name="nome" placeholder="Nome" required>
+                <input type="text" name="descricao" placeholder="Descrição" required>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Cancelar" onclick="toggleModal('cadastroDestino')">
+            </form>
+        </div>
+    </div>
+    <div class="modal oculto" id="cadastroHotel">
+        <div class="janela">
+            <h2>Cadastrar novo hotel</h2>
+            <form id="criarHotel" onsubmit="criarHotel(event)">
+                <input type="text" name="nome" placeholder="Nome" required>
+                <input type="text" name="endereco" placeholder="Endereço" required>
+                <input type="text" name="destinoId" placeholder="ID do Destino" required>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Cancelar" onclick="toggleModal('cadastroHotel')">
+            </form>
+        </div>
+    </div>
+    <div class="modal oculto" id="cadastroPontoTuristico">
+        <div class="janela">
+            <h2>Cadastrar novo ponto turístico</h2>
+            <form id="criarPontoTuristico" onsubmit="criarPontoTuristico(event)">
+                <input type="text" name="nome" placeholder="Nome" required>
+                <input type="text" name="descricao" placeholder="Descrição" required>
+                <input type="text" name="destinoId" placeholder="ID do Destino" required>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Cancelar" onclick="toggleModal('cadastroPontoTuristico')">
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./icone.png" type="image/x-icon">
-    <title>Agência de Viagens</title>
+    <title>PapelTudo</title>
 </head>
+
 <body onload="loadItens()">
     <header>
-        <h1>Agência de Viagens</h1>
+        <h1>Inventário Papelaria PapelTudo</h1>
         <nav>
-            <button onclick="showModal('destino')">Novo Destino</button>
-            <button onclick="showModal('hotel')">Novo Hotel</button>
-            <button onclick="showModal('pontoTuristico')">Novo Ponto Turístico</button>
+            <button onclick="cadastro.classList.remove('oculto')">Novo</button>
         </nav>
     </header>
     <main>
         <table>
             <thead>
                 <tr>
-                    <th>Id</th>
+                    <th>id</th>
                     <th>Nome</th>
                     <th>Descrição</th>
                     <th>Valor</th>
@@ -40,19 +40,19 @@
         </div>
         <h2>By Fefê</h2>
         <div class="patrimonio-box">
-            <h2>Patrimônio da Agência</h2>
+            <h2>Patrimônio da Loja</h2>
             <p id="patrimonio">R$ 0,00</p>
         </div>
     </footer>
     <div class="modal oculto" id="cadastro">
         <div class="janela">
-            <h2 id="modalTitle"></h2>
+            <h2>Cadastrar novo item</h2>
             <form id="criar">
                 <input type="text" name="nome" placeholder="Nome" required>
                 <input type="text" name="descricao" placeholder="Descrição" required>
                 <input type="text" name="valor" placeholder="Valor" required>
                 <input type="submit" value="Enviar">
-                <input type="button" value="Cancelar" onclick="closeModal()">
+                <input type="reset" value="Cancelar" onclick="cadastro.classList.add('oculto')">
             </form>
         </div>
     </div>
@@ -63,12 +63,12 @@
             <h3 id="msg"> </h3>
             <br>
             <div>
-                <button onclick="closeModal()">Fechar</button>
-                <button id="confirma" class="oculto" onclick="confirmarExclusao()">Confirmar</button>
+                <button onclick="window.location.href='./'">Fechar</button>
+                <button id="confirma" class="oculto">Confirma</button>
             </div>
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
+<script src="script.js"></script>
+
 </html>
