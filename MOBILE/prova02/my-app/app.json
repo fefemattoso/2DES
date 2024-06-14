@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "93db5eef-f6bf-4e79-809c-0bba2c2f1e5c"
+      }
+    },
+    "android": {
+      "package": "com.fefemattoso.myapp"
+    }
+  }
+}

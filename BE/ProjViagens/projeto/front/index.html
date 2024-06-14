@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./icone.png" type="image/x-icon">
-    <title>PapelTudo</title>
+    <title>Agência de Viagens</title>
 </head>
 
-<body onload="loadItens()">
+<body onload="loadDestinos()">
     <header>
-        <h1>Inventário Papelaria PapelTudo</h1>
+        <h1>Destinos Turísticos - Agência de Viagens</h1>
         <nav>
             <button onclick="cadastro.classList.remove('oculto')">Novo</button>
         </nav>
@@ -40,13 +40,13 @@
         </div>
         <h2>By Fefê</h2>
         <div class="patrimonio-box">
-            <h2>Patrimônio da Loja</h2>
+            <h2>Patrimônio da Agência</h2>
             <p id="patrimonio">R$ 0,00</p>
         </div>
     </footer>
     <div class="modal oculto" id="cadastro">
         <div class="janela">
-            <h2>Cadastrar novo item</h2>
+            <h2>Cadastrar novo destino</h2>
             <form id="criar">
                 <input type="text" name="nome" placeholder="Nome" required>
                 <input type="text" name="descricao" placeholder="Descrição" required>
