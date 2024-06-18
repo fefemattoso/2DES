@@ -9,6 +9,10 @@ import BuscaScreen from './screens/BuscaScreen';
 import IndicacaoScreen from './screens/IndicacaoScreen';
 import ContatoScreen from './screens/ContatoScreen';
 import DestaqueScreen from './screens/DestaqueScreen';
+import { AntDesign } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
+import { FontAwesome6 } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 
 const Stack = createStackNavigator();
@@ -36,49 +40,44 @@ function AppNavigator() {
           name="Home" 
           component={HomeScreen}
           options={{
-            tabBarLabel: 'Home',
             tabBarIcon: ({ color, size }) => (
-              <MaterialIcons name="home" size={size} color={color} />
+              <FontAwesome5 name="home" size={24} color="black" />
             ),
           }}
         />
         <Tab.Screen 
-          name="BuscaScreen" 
+          name="Buscar" 
           component={BuscaScreen} 
           options={{
-            tabBarLabel: 'Busca',
             tabBarIcon: ({ color, size }) => (
-              <MaterialIcons name="event" size={size} color={color} />
+              <FontAwesome name="search" size={24} color="black" />
             ),
           }}
         />
         <Tab.Screen 
-          name="IndicacaoScreen" 
+          name="Indicações" 
           component={IndicacaoScreen} 
           options={{
-            tabBarLabel: 'Indicações',
             tabBarIcon: ({ color, size }) => (
-              <MaterialIcons name="movie" size={size} color={color} />
+              <AntDesign name="star" size={24} color="black" />
             ),
           }}
         />
         <Tab.Screen 
-          name="ContatoScreen" 
-          component={ContatoScreen} 
-          options={{
-            tabBarLabel: 'Contato',
-            tabBarIcon: ({ color, size }) => (
-              <MaterialIcons name="movie" size={size} color={color} />
-            ),
-          }}
-        />
-        <Tab.Screen 
-          name="DestaqueScreen" 
+          name="Destaques do Ano" 
           component={DestaqueScreen} 
           options={{
-            tabBarLabel: 'Destaques',
             tabBarIcon: ({ color, size }) => (
-              <MaterialIcons name="movie" size={size} color={color} />
+              <FontAwesome6 name="ranking-star" size={24} color="black" />
+            ),
+          }}
+        />
+        <Tab.Screen 
+          name="Contato" 
+          component={ContatoScreen} 
+          options={{
+            tabBarIcon: ({ color }) => (
+              <FontAwesome5 name="headphones" size={24} color="black" />
             ),
           }}
         />

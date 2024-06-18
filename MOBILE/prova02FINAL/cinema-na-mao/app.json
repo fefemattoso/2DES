@@ -1,36 +1,12 @@
 {
   "expo": {
-    "name": "starwars",
-    "slug": "starwars",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "package": "com.vinimanzano.starwars"
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
     "extra": {
       "eas": {
-        "projectId": "ef7ed9da-d8a5-4393-b6aa-862698279467"
+        "projectId": "0bc54f6c-442e-4233-ac98-9c87d1690da9"
       }
+    },
+    "android": {
+      "package": "com.fefemattoso.cinemanamao"
     }
   }
 }

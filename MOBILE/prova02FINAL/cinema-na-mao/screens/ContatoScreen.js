@@ -3,11 +3,19 @@ import { View, Text, StyleSheet, ScrollView } from 'react-native';
 
 function ContatoScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Contato / Quem Somos</Text>
-      <Text>Descrição de quais novidades traz o aplicativo para uso cotidiano.</Text>
-      <Text>Email: contato@cinemanamao.com</Text>
-    </View>
+    <ScrollView contentContainerStyle={styles.container}>
+      <View style={styles.card}>
+        <Text style={styles.title}>Contato / Quem Somos</Text>
+        <Text style={styles.text}>
+          O aplicativo Cinema na Mão traz as últimas novidades do mundo dos filmes, permitindo que você
+          busque informações sobre seus filmes favoritos e receba indicações personalizadas. Nossa missão é 
+          tornar a experiência de encontrar e assistir filmes mais fácil e divertida.
+        </Text>
+        <Text style={styles.text}>
+          Email: contato@cinemanamao.com
+        </Text>
+      </View>
+    </ScrollView>
   );
 }
 
@@ -20,20 +28,31 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
     paddingHorizontal: 15,
   },
+  card: {
+    backgroundColor: '#FFD700',
+    borderRadius: 10,
+    padding: 20,
+    marginVertical: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+    elevation: 5,
+    width: '90%',
+  },
   title: {
-    color: '#fff',
+    fontFamily: 'Arial',
+    color: 'black',
     fontSize: 28,
-    fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
-    fontFamily: 'Arial',
   },
   text: {
-    color: '#fff', 
+    fontFamily: 'Arial',
+    color: 'black',
     fontSize: 18,
     marginBottom: 15,
     textAlign: 'justify',
-    fontFamily: 'Arial',
   },
 });
 
